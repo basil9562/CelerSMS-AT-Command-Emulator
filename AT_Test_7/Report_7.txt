@@ -1,0 +1,21 @@
+﻿Error Simulation & Debugging
+
+
+Objective
+To enable detailed error reporting with AT+CMEE=2, send unsupported AT commands to trigger errors, and interpret the responses.
+
+
+Steps Performed
+Enabled detailed error reporting:
+* Command:
+
+           AT+CMEE=2
+
+
+   * Expected Response:
+ OK
+
+   * Actual Response:
+ ERROR
+
+ The emulator (CelerSMS) does not support the AT+CMEE command, so it could not enable detailed (verbose) error messages.
