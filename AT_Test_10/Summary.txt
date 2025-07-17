@@ -1,0 +1,41 @@
+﻿Summary of Activities
+Successfully launched the AT emulator and executed the following commands in sequence:
+* AT — to check if the modem is alive.
+
+* AT+CSQ — to check the signal strength.
+
+* AT+CMGF=1 — to set SMS mode to text.
+
+* AT+CMGS — to send a test SMS.
+
+* AT+CMGR — to read the SMS message from storage.
+
+At each step, the command was entered, the response was observed, and a screenshot was captured.
+A command log sheet was prepared documenting expected and actual responses, along with notes.
+
+
+Observations & Errors
+   * The AT command worked as expected and confirmed modem readiness.
+
+   * The AT+CSQ command returned a valid RSSI and BER value indicating signal strength.
+
+   * The AT+CMGF=1 command set SMS mode to text without issues.
+
+   * The AT+CMGS command successfully sent a test SMS message.
+
+   * The AT+CMGR command returned an ERROR, as the CelerSMS emulator does not fully support SMS storage or retrieval simulation.
+
+
+
+Workarounds
+Since AT+CMGR was not supported in the emulator, the failure was documented in the notes, and the test was still considered complete based on the capabilities of the emulator.
+
+
+Learnings
+      * Learned the logical sequence of AT commands to perform basic modem operations.
+
+      * Understood how to interpret command responses, both standard (OK) and errors.
+
+      * Experienced the limitation of simulators compared to real hardware.
+
+      * Gained practice in documenting technical test flows, logs, and outcomes clearly.
